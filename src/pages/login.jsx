@@ -1,13 +1,22 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom"; // 👈 thêm để điều hướng
 import "./login.css";
 
 export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Login with:", email, password);
+
+    // 👇 Giả lập đăng nhập thành công
+    if (email === "admin@gmail.com" && password === "123456") {
+      alert("Đăng nhập thành công!");
+      navigate("/home"); // chuyển đến trang chủ
+    } else {
+      alert("Sai email hoặc mật khẩu!");
+    }
   };
 
   return (

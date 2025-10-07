@@ -1,0 +1,197 @@
+:root{
+  --blue:#1582e6; --blue2:#0a5fb5;
+  --orange:#ff9a16;
+  --text:#1f2b3a; --muted:#6b7280;
+  --radius:14px; --shadow:0 12px 32px rgba(0,0,0,.12);
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif;color:var(--text)}
+.container{width:min(1200px,92%);margin:0 auto}
+
+/* Topbar */
+.topbar{background:var(--blue);color:#eaf4ff;font-size:13px}
+.topbar .container{display:flex;justify-content:space-between;align-items:center;padding:6px 0}
+.topbar a{color:#eaf4ff;text-decoration:none}
+.topbar .sep{display:inline-block;width:1px;height:14px;background:#fff3;margin:0 12px}
+
+/* Navbar */
+.navbar{background:#fff;border-bottom:1px solid #e5e7eb;position:sticky;top:0;z-index:30}
+.nav-inner{display:flex;align-items:center;gap:18px;padding:10px 0}
+.brand img{height:42px}
+.menu{list-style:none;display:flex;gap:18px;margin:0 auto 0 8px;padding:0}
+.menu a{color:var(--text);text-decoration:none;font-weight:600;padding:10px 12px;border-radius:10px}
+.menu .active a, .menu a:hover{background:rgba(21,130,230,.08);color:var(--blue)}
+.search-mini{border:none;background:var(--orange);color:#fff;border-radius:10px;padding:8px 12px;cursor:pointer}
+
+/* HERO – dùng ảnh bạn đã gửi: đặt tại public/vivutoday.jpg */
+.hero {
+  position: relative;
+  background: url("/vivutoday.jpg") no-repeat center top;
+  background-size: contain; /* hoặc cover nếu muốn full màn hình */
+  min-height: 650px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding-bottom: 60px; /* Đưa form xuống dưới gần cát */
+}
+
+
+.hero::after{
+  content:""; 
+  position:absolute; 
+  inset:0; 
+  background: transparent; /* không làm mờ ảnh */
+}
+
+.hero-inner{position:relative;z-index:1}
+.hero-title{margin:0; text-align:center; font-size:34px; letter-spacing:.5px}
+.hero-title span{color:var(--blue)}
+.hero-sub{margin:6px 0 16px; text-align:center; color:var(--muted)}
+
+/* Search panel nổi */
+/* vị trí khung tìm kiếm */
+.search-card{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 250px;   /* ⬅️ tăng số này để khung nằm cao hơn, giảm để hạ xuống */
+  width: 100%;
+  max-width: 1200px;
+
+  /* giữ nguyên phần style đẹp trước đó */
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr auto;
+  gap: 20px;
+  padding: 30px 15px 32.53px 15px;
+  border-radius: 10px;
+  background: rgba(255,255,255,.40);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border: 1px solid rgba(255,255,255,.55);
+  box-shadow: 0 12px 32px rgba(0,0,0,.12);
+  z-index: 5;
+}
+
+
+.field label{display:block;font-size:13px;color:#374151;margin:0 0 6px 2px;font-weight:700}
+.field input{width:100%;padding:12px 14px;border:1px solid #d1d5db;border-radius:10px;font-size:14px;outline:none;background:linear-gradient(#f7fbff,#fff)}
+.field input:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(21,130,230,.15)}
+.btn-primary{
+  white-space:nowrap; padding:14px 22px; border:none; border-radius:12px;
+  background:var(--orange); color:#fff; font-weight:800; cursor:pointer;
+  display:flex; align-items:center; gap:8px; font-size:15px; box-shadow:0 10px 24px rgba(255,154,22,.35)
+}
+
+/* Sections */
+.section{padding:48px 0;background:#fff}
+.section.alt{background:#f7fafc}
+.section h2{margin:0 0 18px}
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.card{background:#fff;border:1px solid #e5e7eb;border-radius:14px;padding:18px;box-shadow:0 8px 20px rgba(0,0,0,.06)}
+.promo{height:140px;border-radius:14px;display:grid;place-items:center;font-weight:800;color:#ff7a00;background:linear-gradient(90deg,#e7f3ff,#fff0e0)}
+
+.footer{padding:26px 0;text-align:center;color:#6b7280;background:#fff}
+
+/* Responsive */
+@media (max-width: 992px){
+  .menu{display:none}
+  .search-card{grid-template-columns:1fr}
+  .btn-primary{justify-content:center}
+  .hero{padding-bottom:60px}
+}
+@media (max-width: 640px){
+  .cards{grid-template-columns:1fr}
+}
+/* ===== STYLE INPUT & BUTTON TRONG FORM TÌM CHUYẾN ===== */
+.search-card input,
+.search-card select {
+  width: 100%;
+  height: 55px;
+  border: 1px solid #dcdcdc;
+  border-radius: 8px;
+  padding: 0 15px;
+  font-size: 15px;
+  color: #333;
+}
+
+.search-card label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #444;
+}
+
+.btn-search {
+  background: #ffa500;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-weight: 700;
+  padding: 15px 25px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-search:hover {
+  background: #ff8c00;
+}
+/* tuyến đường phổ biến */
+/* ===== TUYẾN ĐƯỜNG PHỔ BIẾN ===== */
+.popular-routes {
+  padding: 80px 250px;
+  background: #fff;
+}
+
+.popular-routes h2 {
+  margin-bottom: 25px;
+  font-size: 26px;
+  font-weight: 700;
+  color: #222;
+}
+
+.routes-list {
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.route-item {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 260px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.route-item img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.route-info {
+  padding: 12px 16px;
+  text-align: left;
+}
+
+.route-info h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #0066cc;
+  margin: 0 0 6px;
+}
+
+.route-info p {
+  color: #009933;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.route-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(255, 165, 0, 0.3);
+}

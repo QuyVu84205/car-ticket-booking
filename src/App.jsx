@@ -1,6 +1,7 @@
 import { Routes, Route, Navigate } from "react-router-dom";
-import Login from "./pages/login.jsx";
+import Login from "./pages/Login.jsx";
 import Register from "./pages/Register.jsx";
+import Home from "./pages/Home.jsx";
 
 export default function App() {
   return (
@@ -8,7 +9,7 @@ export default function App() {
       <Route path="/" element={<Navigate to="/login" />} />
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
-      {/* có thể thêm /home, /dashboard… sau này */}
+      <Route path="/home" element={<Home />} />
     </Routes>
   );
 }
