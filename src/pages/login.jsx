@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom"; // 👈 thêm để điều hướng
 import "./login.css";
-
+import authApi from "../api/authApi.js";
 export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -10,7 +10,7 @@ export default function Login() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // 👇 Giả lập đăng nhập thành công
+
     if (email === "admin@gmail.com" && password === "123456") {
       alert("Đăng nhập thành công!");
       navigate("/home"); // chuyển đến trang chủ
