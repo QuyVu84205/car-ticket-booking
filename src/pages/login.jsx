@@ -23,7 +23,7 @@ export default function Login() {
     <div className="login-page">
       <div className="login-box">
         <div className="login-header">
-          <img src="/logo.webp" alt="Car Ticket Logo" className="logo" />
+          <img src="/logo.png" alt="Car Ticket Logo" className="logo" />
           <h2>Car Ticket Booking</h2>
           <p>Đặt vé nhanh chóng – An tâm mỗi chuyến đi</p>
         </div>

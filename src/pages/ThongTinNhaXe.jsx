@@ -71,23 +71,23 @@ export default function Thongtinnhaxe() {
         </div>
       </div>
 
-      <nav className="navbar">
-        <div className="container nav-inner">
-          <div className="brand">
-            <NavLink to="/home">
-              <img src="/logo.webp" alt="Vivutoday" />
-            </NavLink>
-          </div>
-          <ul className="menu">
-            <li><NavLink to="/home">Trang chủ</NavLink></li>
-            <li><NavLink to="/gioi-thieu">Giới thiệu</NavLink></li>
-            <li><NavLink to="/thongtinnhaxe" className="active">Thông tin nhà xe</NavLink></li>
-            <li><NavLink to="/bus-station">Bến xe</NavLink></li>
-            <li><NavLink to="/tuyen-duong">Tuyến đường</NavLink></li>
-            <li><NavLink to="/kiem-tra-ve">Kiểm tra vé</NavLink></li>
-          </ul>
-        </div>
-      </nav>
+<nav className="navbar">
+  <div className="container nav-inner">
+    <div className="brand">
+      <img src="/logo.png" alt="Car Ticket Booking" />
+    </div>
+    <ul className="menu">
+      <li><NavLink to="/home" className={({isActive}) => isActive ? "active" : ""}>Trang chủ</NavLink></li>
+      <li><NavLink to="/gioi-thieu">Giới thiệu</NavLink></li>
+      <li><NavLink to="/thongtinnhaxe">Thông tin nhà xe</NavLink></li>
+      <li><NavLink to="/bus-station">Bến xe</NavLink></li>
+      <li><NavLink to="/tuyen-duong">Tuyến đường</NavLink></li>
+      <li><NavLink to="/kiem-tra-ve">Kiểm tra vé</NavLink></li>
+    </ul>
+    <button className="search-mini" aria-label="Search">🔍</button>
+  </div>
+</nav>
+
 
       {/* MAIN */}
       <div className="container">

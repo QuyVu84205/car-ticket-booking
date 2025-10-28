@@ -30,7 +30,7 @@ export default function Home() {
       <nav className="navbar">
         <div className="container nav-inner">
           <div className="brand">
-            <img src="/logo.webp" alt="Car Ticket Booking" />
+            <img src="/logo.png" alt="Car Ticket Booking" />
           </div>
           <ul className="menu">
           <li><NavLink to="/home" className={({isActive}) => isActive ? "active" : ""}>Trang chủ</NavLink></li>
@@ -39,6 +39,8 @@ export default function Home() {
           <li><NavLink to="/bus-station">Bến xe</NavLink></li>
           <li><NavLink to="/tuyen-duong">Tuyến đường</NavLink></li>
           <li><NavLink to="/kiem-tra-ve">Kiểm tra vé</NavLink></li>
+          <li><NavLink to="/gioi-thieu">Giới thiệu</NavLink></li>
+
           </ul>
           <button className="search-mini" aria-label="Search">🔍</button>
         </div>

@@ -23,32 +23,6 @@
 }
 .contact-right span { margin: 0 6px; }
 
-/* NAVBAR */
-.navbar {
-  background: #f5f5f5;
-  border-bottom: 2px solid #004aad;
-}
-.nav-inner {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 12px 0;
-}
-.menu {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-}
-.menu a {
-  text-decoration: none;
-  color: #222;
-  font-weight: 500;
-}
-.menu a.active {
-  color: #004aad;
-  border-bottom: 3px solid #004aad;
-  padding-bottom: 4px;
-}
 
 /* GRID */
 .page-title {

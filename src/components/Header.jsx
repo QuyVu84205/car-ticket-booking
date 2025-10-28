@@ -1,4 +1,4 @@
-// src/components/Header.jsx
+
 import React from "react";
 import { NavLink } from "react-router-dom";
 import "./header.css";
@@ -23,7 +23,7 @@ export default function Header() {
         <div className="container nav-inner">
           <div className="brand">
             <NavLink to="/home">
-              <img src="/logo.webp" alt="Car Ticket Booking" />
+              <img src="/logo.png" alt="Car Ticket Booking" />
             </NavLink>
           </div>
           <ul className="menu">
@@ -33,6 +33,7 @@ export default function Header() {
             <li><NavLink to="/bus-station">Bến xe</NavLink></li>
             <li><NavLink to="/tuyen-duong">Tuyến đường</NavLink></li>
             <li><NavLink to="/kiem-tra-ve">Kiểm tra vé</NavLink></li>
+
           </ul>
           <button className="search-mini" aria-label="Search">🔍</button>
         </div>
