@@ -4,7 +4,8 @@ import Register from "./pages/Register.jsx";
 import Home from "./pages/Home.jsx";
 import Thongtinnhaxe from "./pages/Thongtinnhaxe.jsx";
 import BusStation from "./pages/bus-station.jsx";
-import GioiThieu from "./pages/GioiThieu.jsx"; // thêm dòng này
+import GioiThieu from "./pages/GioiThieu.jsx";
+import TuyenDuong from "./pages/TuyenDuong.jsx";
 export default function App() {
   return (
     <Routes>
@@ -15,6 +16,7 @@ export default function App() {
       <Route path="/thongtinnhaxe" element={<Thongtinnhaxe />} /> {}
       <Route path="/bus-station" element={<BusStation />} /> 
       <Route path="/gioi-thieu" element={<GioiThieu />} />
+      <Route path="/tuyen-duong" element={<TuyenDuong />} />
     </Routes>
   );
 }
